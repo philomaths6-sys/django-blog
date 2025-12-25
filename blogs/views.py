@@ -6,7 +6,7 @@ from django.db.models import Q
 
 # Create your views here.
 def post_by_category(request,category_id):
-    posts= Blog.objects.filter(status='Published',category_id=category_id)
+    posts= Blog.objects.filter(status='Published',category_id=category_id).order_by('-updated')
     try:
         category = Category.objects.get(pk= category_id)
     except:
