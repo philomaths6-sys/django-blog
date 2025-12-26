@@ -53,7 +53,7 @@ def login(request):
             if user is not None:
                 print(user)
                 auth.login(request,user)
-                return redirect('home')
+                return redirect('dashboard')
             
         else :
             print(form.add_error(None,"Invalid username or password"))
