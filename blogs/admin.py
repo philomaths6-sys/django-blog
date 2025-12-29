@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category,Blog,About,Social
+from .models import Category,Blog,About,Social,Comment
 
 
 class BlogAdmin(admin.ModelAdmin):
@@ -13,3 +13,4 @@ admin.site.register(Category)
 admin.site.register(Blog,BlogAdmin)
 admin.site.register(About)
 admin.site.register(Social)
+admin.site.register(Comment)
